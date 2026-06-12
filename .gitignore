@@ -1,0 +1,15 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtualenv
+.venv/
+venv/
+
+# Environment / secrets
+.env
+
+# Editor / logs
+.vscode/
+*.log

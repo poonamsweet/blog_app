@@ -1,36 +1,31 @@
 # Blog App
 
-Simple Flask blog application.
+A simple Flask-based blog application with Blueprint architecture.
 
-## Files & Symbols
-- Application entry: [app.py](app.py) — imports [`blog.blog_bp`](blog/__init__.py)
-- Docker compose: [docker-compose.yml](docker-compose.yml)
+---
+
+## 📁 Project Structure & Files
+
+- Application entry: [app.py](app.py) — registers [`blog.blog_bp`](blog/__init__.py)
+- Docker Compose: [docker-compose.yml](docker-compose.yml)
 - Dockerfile: [Dockerfile](Dockerfile)
-- Python requirements: [requirements.txt](requirements.txt)
-- Database models: [models.py](models.py) and [blog/models.py](blog/models.py)
-- Blueprint and routes: [blog/__init__.py](blog/__init__.py) (exports `blog_bp`) and [blog/routes.py](blog/routes.py)
-- Templates: [templates/posts.html](templates/posts.html), [templates/comments.html](templates/comments.html)
+- Requirements: [requirements.txt](requirements.txt)
 
-## Quick start (Docker)
-1. Build and run:
-```sh
-docker-compose up --build
-```
-2. Open http://localhost:5000
+### 🧩 Blog Module
+- Blueprint initialization: [blog/__init__.py](blog/__init__.py)
+- Routes: [blog/routes.py](blog/routes.py)
+- Templates:
+  - [templates/posts.html](templates/posts.html)
+  - [templates/comments.html](templates/comments.html)
 
-## Run locally
-1. Create virtualenv and install:
-```sh
-python -m venv .venv
-.venv/Scripts/activate   # or `source .venv/bin/activate` on macOS/Linux
-pip install -r requirements.txt
-```
-2. Export env vars from [.env](.env) or set them in your environment.
-3. Run:
-```sh
-python app.py
-```
+### 🗄️ Database
+- Models: [models.py](models.py)(optional)
 
-## Notes
-- The Flask app registers the blueprint from [`blog.blog_bp`](blog/__init__.py) in [app.py](app.py).
-- Database is configured via environment variables in [.env](.env) and [docker-compose.yml](docker-compose.yml).
+---
+
+## 🚀 After Clone - How to Run
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/poonamsweet/blog_app.git
+cd blog_app
